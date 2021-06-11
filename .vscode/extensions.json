@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "bradlc.vscode-tailwindcss",
+    "stylelint.vscode-stylelint",
     "johnsoncodehk.volar",
     "editorconfig.editorconfig"
   ]

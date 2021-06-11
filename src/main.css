@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-black;
+  }
+
+  button {
+    @apply focus:outline-none;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply w-full py-1 flex items-center justify-center text-center;
+    @apply border-0 border-[transparent] rounded-full;
+  }
+  .btn-lg {
+    @apply py-2 text-lg font-bold tracking-[0.8px] border-2;
+  }
+  .btn-primary {
+    @apply bg-yellow text-dark;
+  }
+  .btn-secondary {
+    @apply text-gray border-gray border-opacity-100;
+  }
+
+  input, select {
+    @apply w-full px-4 py-2 text-[#999999] bg-[#F7F7F7] border-none focus:ring-0 !important;
+  }
+  label {
+    @apply text-[#373A3C] text-sm;
+  }
+}
