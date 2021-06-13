@@ -46,22 +46,22 @@
           </div>
 
           <div class="lg:mt-2 flex h-9 space-x-5 overflow-x-auto">
-            <div class="flex items-center">
+            <button class="flex items-center" v-tippy="{ content: '認證標章' }">
               <img class="w-5 lg:w-6" src="../assets/icon_good01.svg" alt="認證標章 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">認證標章</div>
-            </div>
-            <div class="flex items-center">
+            </button>
+            <button class="flex items-center" v-tippy="{ content: '品質保證' }">
               <img class="w-5 lg:w-6" src="../assets/icon_good02.svg" alt="品質保證 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">品質保證</div>
-            </div>
-            <div class="flex items-center">
+            </button>
+            <button class="flex items-center" v-tippy="{ content: '原生創意' }">
               <img class="w-5 lg:w-6" src="../assets/icon_good03.svg" alt="原生創意 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">原生創意</div>
-            </div>
-            <div class="flex items-center">
+            </button>
+            <button class="flex items-center" v-tippy="{ content: '人氣王' }">
               <img class="w-5 lg:w-6" src="../assets/icon_good04.svg" alt="人氣王 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">人氣王</div>
-            </div>
+            </button>
           </div>
 
           <div class="mt-2 lg:mt-4 p-4 lg:py-3.5 bg-white text-gray-600 text-sm lg:text-base text-justify border-l-3 border-yellow rounded-lg">

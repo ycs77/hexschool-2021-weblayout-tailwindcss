@@ -3,6 +3,7 @@ module.exports = {
   purge: [
     './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
+    './src/style/safelist.txt',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -11,6 +12,10 @@ module.exports = {
       black: '#000000',
 
       yellow: '#FFDF65',
+      'light-yellow': '#FFEA98',
+
+      red: '#FF785E',
+      'light-red': '#FFA391',
 
       gray: {
         100: '#F8F9FA',

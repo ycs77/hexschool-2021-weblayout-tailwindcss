@@ -1,0 +1,13 @@
+@layer base {
+  html {
+    @apply text-gray-800;
+  }
+
+  a {
+    @apply transition-colors duration-150;
+  }
+
+  button {
+    @apply focus:outline-none;
+  }
+}

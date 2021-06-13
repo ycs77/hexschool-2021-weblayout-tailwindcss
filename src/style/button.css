@@ -1,36 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  html {
-    @apply text-gray-800;
-  }
-
-  button {
-    @apply focus:outline-none;
-  }
-}
-
 @layer components {
   .btn {
     @apply px-6 py-1 flex items-center justify-center text-center;
     @apply border-0 border-[transparent] rounded-full whitespace-nowrap;
+    @apply transition-colors duration-200;
   }
+
   .btn-lg {
     @apply px-8 py-2 text-lg font-bold tracking-[0.8px];
   }
+
   .btn-primary {
     @apply bg-yellow text-gray-600;
-  }
-  .btn-secondary {
-    @apply text-gray-500 border-gray-500 border-2;
+    @apply hover:bg-red hover:text-white;
   }
 
-  input, select {
-    @apply w-full px-4 py-2 text-[#999999] bg-[#F7F7F7] border-none focus:ring-0 !important;
-  }
-  label {
-    @apply text-gray-900 text-sm lg:text-base;
+  .btn-secondary {
+    @apply text-gray-500 border-gray-500 border-2;
+    @apply hover:bg-yellow hover:border-yellow;
+
+    svg {
+      @apply transition-colors duration-200;
+    }
+
+    &:hover svg {
+      @apply text-red;
+    }
   }
 }

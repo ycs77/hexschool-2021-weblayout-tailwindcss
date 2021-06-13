@@ -1,0 +1,9 @@
+@layer components {
+  .tippy-box {
+    @apply text-yellow tracking-[2px];
+  }
+
+  .tippy-content {
+    @apply px-3 py-1;
+  }
+}
