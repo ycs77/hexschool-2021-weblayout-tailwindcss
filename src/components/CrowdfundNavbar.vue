@@ -14,7 +14,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/progress" class="block p-4 lg:px-3 lg:py-6 text-gray-600 text-sm lg:text-base tracking-[1.75px]" :class="isActive('/progress') ? 'font-bold border-b-2 border-yellow' : ''">
+            <router-link to="/news" class="block p-4 lg:px-3 lg:py-6 text-gray-600 text-sm lg:text-base tracking-[1.75px]" :class="isActive('/news') ? 'font-bold border-b-2 border-yellow' : ''">
               目前進度
             </router-link>
           </li>
