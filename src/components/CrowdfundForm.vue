@@ -13,8 +13,8 @@
       <div class="mt-4 lg:mt-6 space-y-2 lg:space-y-4">
         <vee-field name="plan" :rules="isRequired" v-slot="{ field, errors }">
           <div>
-            <label>贊助方案</label>
-            <select name="plan" class="mt-2" :class="errorClass(errors)" v-bind="field">
+            <label for="plan">贊助方案</label>
+            <select name="plan" id="plan" class="mt-2" :class="errorClass(errors)" v-bind="field">
               <option value="">請選擇一個方案</option>
               <option value="1">方案1</option>
               <option value="2">方案2</option>
@@ -25,32 +25,32 @@
 
         <vee-field name="name" :rules="isRequired" v-slot="{ field, errors }">
           <div>
-            <label>收件人姓名</label>
-            <input type="text" name="name" class="mt-2" :class="errorClass(errors)" v-bind="field">
+            <label for="name">收件人姓名</label>
+            <input type="text" name="name" id="name" class="mt-2" :class="errorClass(errors)" v-bind="field">
             <div v-if="errors.length" class="form-error">請輸入正確的收件人姓名</div>
           </div>
         </vee-field>
 
         <vee-field name="phone" :rules="isRequired" v-slot="{ field, errors }">
           <div>
-            <label>聯絡電話</label>
-            <input type="tel" name="phone" class="mt-2" :class="errorClass(errors)" v-bind="field">
+            <label for="phone">聯絡電話</label>
+            <input type="tel" name="phone" id="phone" class="mt-2" :class="errorClass(errors)" v-bind="field">
             <div v-if="errors.length" class="form-error">請輸入正確的電話號碼</div>
           </div>
         </vee-field>
 
         <vee-field name="email" :rules="isRequired" v-slot="{ field, errors }">
           <div>
-            <label>聯絡信箱</label>
-            <input type="email" name="email" class="mt-2" :class="errorClass(errors)" v-bind="field">
+            <label for="email">聯絡信箱</label>
+            <input type="email" name="email" id="email" class="mt-2" :class="errorClass(errors)" v-bind="field">
             <div v-if="errors.length" class="form-error">請輸入正確的郵件格式</div>
           </div>
         </vee-field>
 
         <vee-field name="payment" :rules="isRequired" v-slot="{ field, errors }">
           <div>
-            <label>付款方式</label>
-            <select name="payment" class="mt-2" :class="errorClass(errors)" v-bind="field">
+            <label for="payment">付款方式</label>
+            <select name="payment" id="payment" class="mt-2" :class="errorClass(errors)" v-bind="field">
               <option value="">請選擇一個付款方式</option>
               <option value="transfer">銀行轉帳</option>
               <option value="credit">信用卡付款</option>
