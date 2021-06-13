@@ -1,16 +1,16 @@
 <template>
   <div>
 
-    <crowdfund-banner ref="banner" />
+    <CrowdfundBanner ref="banner" />
 
-    <crowdfund-navbar class="sticky top-0 z-10 bg-white" />
+    <CrowdfundNavbar class="sticky top-0 z-10 bg-white" />
 
     <div class="container pt-8 pb-12 grid">
 
       <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
         <div class="lg:col-span-2">
           <main>
-            <router-view v-slot="{ Component }">
+            <RouterView v-slot="{ Component }">
               <transition
                 enter-active-class="transition duration-200 ease-out"
                 enter-from-class="transform opacity-0"
@@ -22,14 +22,14 @@
               >
                 <component :is="Component" />
               </transition>
-            </router-view>
+            </RouterView>
           </main>
 
-          <crowdfund-form class="hidden lg:block mt-12" />
+          <CrowdfundForm class="hidden lg:block mt-12" />
         </div>
 
         <div class="lg:col-span-1">
-          <crowdfund-creator-info />
+          <CrowdfundCreatorInfo />
 
           <div class="mt-8">
             <h3 class="bg-gray-50 py-1.5 text-xl text-center font-bold border-l-4 border-r-4 border-yellow">
@@ -38,14 +38,14 @@
 
             <ul class="mt-4 space-y-4">
               <li v-for="i in 3">
-                <crowdfund-card />
+                <CrowdfundCard />
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <crowdfund-form ref="mobileForm" class="lg:hidden mt-8" />
+      <CrowdfundForm ref="mobileForm" class="lg:hidden mt-8" />
 
     </div>
 

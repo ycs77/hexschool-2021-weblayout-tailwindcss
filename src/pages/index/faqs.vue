@@ -1,8 +1,8 @@
 <template>
   <ul class="space-y-4">
-    <disclosure v-for="faq in faqs" v-slot="{ open }">
+    <Disclosure v-for="faq in faqs" v-slot="{ open }">
       <li class="border border-gray-100" :class="open ? 'shadow-around rounded' : 'rounded-lg'">
-        <disclosure-button class="w-full px-3.5 lg:px-5 py-3 flex justify-between items-center text-left">
+        <DisclosureButton class="w-full px-3.5 lg:px-5 py-3 flex justify-between items-center text-left">
           <div class="flex items-center">
             <div class="inline-flex w-7 h-7 justify-center items-center bg-yellow rounded">
               <span class="text-sm font-baloo font-bold tracking-[0.7px]">
@@ -14,22 +14,22 @@
             </span>
           </div>
           <i-heroicons-solid-chevron-down class="inline-block transform transition-transform" :class="open ? '-rotate-180' : ''" />
-        </disclosure-button>
+        </DisclosureButton>
 
         <transition
           enter-active-class="transition duration-150 ease-out"
-          enter-from-class="transform scale-95 opacity-0"
-          enter-to-class="transform scale-100 opacity-100"
-          leave-active-class="transition duration-100 ease-out"
-          leave-from-class="transform scale-100 opacity-100"
-          leave-to-class="transform scale-95 opacity-0"
+          enter-from-class="transform scale-95 -translate-y-2 opacity-0"
+          enter-to-class="transform scale-100 translate-y-0 opacity-100"
+          leave-active-class="transition duration-100 ease-in"
+          leave-from-class="transform scale-100 translate-y-0 opacity-100"
+          leave-to-class="transform scale-95 -translate-y-2 opacity-0"
         >
-          <disclosure-panel class="p-3.5 lg:p-4 lg:pl-16 lg:text-[14px] text-gray-500 tracking-[0.8px] lg:tracking-[0.7px] leading-[27px] border-t border-gray-100">
+          <DisclosurePanel class="p-3.5 lg:p-4 lg:pl-16 lg:text-[14px] text-gray-500 tracking-[0.8px] lg:tracking-[0.7px] leading-[27px] border-t border-gray-100">
             {{ faq.content }}
-          </disclosure-panel>
+          </DisclosurePanel>
         </transition>
       </li>
-    </disclosure>
+    </Disclosure>
   </ul>
 </template>
 

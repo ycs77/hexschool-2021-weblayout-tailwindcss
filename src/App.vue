@@ -2,9 +2,9 @@
   <header class="py-3 border-b-[5px] border-yellow">
     <div class="container lg:flex">
       <div class="flex justify-between lg:flex-grow-0">
-        <router-link to="/">
+        <RouterLink to="/">
           <img class="h-10 ml-1" src="./assets/logo.jpg" alt="拚拚 Logo" />
-        </router-link>
+        </RouterLink>
 
         <button class="lg:hidden" type="button" @click="showNav = !showNav">
           <i-mdi-menu class="w-8 h-8" />
@@ -42,7 +42,7 @@
     </div>
   </header>
 
-  <router-view />
+  <RouterView />
 
   <footer class="bg-gray-800 pt-4 pb-[18px] lg:py-8">
     <div class="text-white text-center text-sm lg:text-base tracking-[1.8px] lg:tracking-[2px]">
