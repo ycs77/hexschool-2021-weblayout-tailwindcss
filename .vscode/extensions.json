@@ -2,7 +2,7 @@
   "recommendations": [
     "bradlc.vscode-tailwindcss",
     "stylelint.vscode-stylelint",
-    "johnsoncodehk.volar",
+    "octref.vetur",
     "editorconfig.editorconfig"
   ]
 }

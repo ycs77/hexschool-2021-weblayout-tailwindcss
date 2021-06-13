@@ -52,8 +52,8 @@
             <label>付款方式</label>
             <select name="payment" class="mt-2" :class="errorClass(errors)" v-bind="field">
               <option value="">請選擇一個付款方式</option>
+              <option value="transfer">銀行轉帳</option>
               <option value="credit">信用卡付款</option>
-              <option value="COD">貨到付款</option>
             </select>
             <div v-if="errors.length" class="form-error">請選擇一種付款方式</div>
           </div>

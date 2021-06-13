@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 pt-4 lg:pt-12 pb-8">
+  <div class="bg-gray-50 pt-4 lg:pt-12 pb-8">
     <div class="container">
       <div>
         <span class="px-4 py-0.5 bg-gray-500 text-white text-xs leading-[18px] rounded">魔法科技</span>

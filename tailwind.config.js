@@ -18,7 +18,8 @@ module.exports = {
       'light-red': '#FFA391',
 
       gray: {
-        100: '#F8F9FA',
+        50: '#F8F9FA',
+        100: '#E5E5E5',
         200: '#E8E8DB',
         500: '#858377', // gray
         600: '#636057', // dark
@@ -50,6 +51,9 @@ module.exports = {
       },
       borderWidth: {
         3: '3px',
+      },
+      boxShadow: {
+        around: '0 0 8px 0 rgba(73, 72, 70, 0.15)',
       },
     },
   },

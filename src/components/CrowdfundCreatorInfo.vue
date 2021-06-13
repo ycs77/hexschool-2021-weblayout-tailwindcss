@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 border border-[#E5E5E5] rounded-lg">
+  <div class="p-4 border border-gray-100 rounded-lg">
     <div class="flex items-center">
       <img class="w-[73px] h-[73px] lg:w-[100px] lg:h-[100px] border-3 border-yellow rounded-full" src="../assets/store_img.jpg" alt="缺錢事務所 的大頭照">
 
