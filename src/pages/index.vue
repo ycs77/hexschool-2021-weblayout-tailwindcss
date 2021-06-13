@@ -1,16 +1,28 @@
 <template>
-  <main>
+  <div>
 
-    <crowdfund-banner />
+    <crowdfund-banner ref="banner" />
 
-    <crowdfund-navbar />
+    <crowdfund-navbar class="sticky top-0 z-10 bg-white" />
 
     <div class="container pt-8 pb-12 grid">
 
       <div class="grid lg:grid-cols-3 gap-8 lg:gap-12">
         <div class="lg:col-span-2">
           <main>
-            <router-view />
+            <router-view v-slot="{ Component }">
+              <transition
+                enter-active-class="transition duration-200 ease-out"
+                enter-from-class="transform opacity-0"
+                enter-to-class="transform opacity-100"
+                leave-active-class="transition duration-100 ease-in"
+                leave-from-class="transform opacity-100"
+                leave-to-class="transform opacity-0"
+                mode="out-in"
+              >
+                <component :is="Component" />
+              </transition>
+            </router-view>
           </main>
 
           <crowdfund-form class="hidden lg:block mt-12" />
@@ -33,9 +45,82 @@
         </div>
       </div>
 
-      <crowdfund-form class="lg:hidden mt-8" />
+      <crowdfund-form ref="mobileForm" class="lg:hidden mt-8" />
 
     </div>
 
-  </main>
+    <transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="transform opacity-0"
+      enter-to-class="transform opacity-100"
+      leave-active-class="transition duration-150 ease-in"
+      leave-from-class="transform opacity-100"
+      leave-to-class="transform opacity-0"
+    >
+      <button v-if="showBottomBtn" class="lg:hidden fixed inset-x-0 bottom-0 btn btn-primary w-full py-2.5 font-bold tracking-[1.6px] rounded-none shadow-bottom-btn" type="button" @click="scrollToForm">
+        贊助專案
+      </button>
+    </transition>
+
+  </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      showBottomBtn: false,
+      inBanner: false,
+      inMobileForm: false,
+    }
+  },
+  methods: {
+    scrollToNavbar() {
+      window.scrollTo({ top: this.navbarTop(), behavior: 'smooth' })
+    },
+    scrollToForm() {
+      window.scrollTo({ top: this.formTop() - 72, behavior: 'smooth' })
+    },
+
+    navbarTop() {
+      const el = this.$refs.banner.$el
+      return el.offsetTop + el.clientHeight
+    },
+    formTop() {
+      const el = this.$refs.mobileForm.$el
+      return el ? el.offsetTop : 0
+    },
+
+    updateShowBottomBtnWithObserver() {
+      this.showBottomBtn = !this.inBanner && !this.inMobileForm
+    },
+
+    observeBanner() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          this.inBanner = entry.isIntersecting
+          this.updateShowBottomBtnWithObserver()
+        })
+      }, { rootMargin: '-1px 0px 0px 0px' })
+      observer.observe(this.$refs.banner.$el)
+    },
+
+    observeMobileForm() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          this.inMobileForm = entry.isIntersecting
+          this.updateShowBottomBtnWithObserver()
+        })
+      }, { threshold: 0.8 })
+      observer.observe(this.$refs.mobileForm.$el)
+    },
+  },
+  mounted() {
+    this.observeBanner()
+    this.observeMobileForm()
+  },
+  beforeRouteUpdate(to, from) {
+    this.scrollToNavbar()
+  },
+}
+</script>
