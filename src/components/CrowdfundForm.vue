@@ -68,13 +68,7 @@
 </template>
 
 <script>
-import { Form as VeeForm, Field as VeeField } from 'vee-validate'
-
 export default {
-  components: {
-    VeeForm,
-    VeeField,
-  },
   methods: {
     onSubmit() {
       location.href = location.href

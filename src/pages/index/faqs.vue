@@ -34,14 +34,7 @@
 </template>
 
 <script>
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-
 export default {
-  components: {
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-  },
   data() {
     return {
       faqs: [
