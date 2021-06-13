@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply text-black;
+    @apply text-gray-800;
   }
 
   button {
@@ -14,23 +14,23 @@
 
 @layer components {
   .btn {
-    @apply w-full py-1 flex items-center justify-center text-center;
-    @apply border-0 border-[transparent] rounded-full;
+    @apply px-6 py-1 flex items-center justify-center text-center;
+    @apply border-0 border-[transparent] rounded-full whitespace-nowrap;
   }
   .btn-lg {
-    @apply py-2 text-lg font-bold tracking-[0.8px] border-2;
+    @apply px-8 py-2 text-lg font-bold tracking-[0.8px];
   }
   .btn-primary {
-    @apply bg-yellow text-dark;
+    @apply bg-yellow text-gray-600;
   }
   .btn-secondary {
-    @apply text-gray border-gray border-opacity-100;
+    @apply text-gray-500 border-gray-500 border-2;
   }
 
   input, select {
     @apply w-full px-4 py-2 text-[#999999] bg-[#F7F7F7] border-none focus:ring-0 !important;
   }
   label {
-    @apply text-[#373A3C] text-sm;
+    @apply text-gray-900 text-sm lg:text-base;
   }
 }
