@@ -2,7 +2,7 @@
   .btn {
     @apply px-6 py-1 flex items-center justify-center text-center;
     @apply border-0 border-[transparent] rounded-full whitespace-nowrap;
-    @apply transition-colors duration-200;
+    @apply transition duration-200;
   }
 
   .btn-lg {
@@ -12,11 +12,15 @@
   .btn-primary {
     @apply bg-yellow text-gray-600;
     @apply hover:bg-red hover:text-white;
+    @apply focus:ring-4 focus:ring-yellow focus:ring-opacity-50;
+    @apply focus:hover:ring-red focus:hover:ring-opacity-50;
   }
 
   .btn-secondary {
     @apply text-gray-500 border-gray-500 border-2;
     @apply hover:bg-yellow hover:border-yellow;
+    @apply focus:ring-4 focus:ring-gray-500 focus:ring-opacity-50;
+    @apply focus:hover:ring-yellow focus:hover:ring-opacity-50;
 
     svg {
       @apply transition-colors duration-200;
