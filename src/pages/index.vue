@@ -52,10 +52,23 @@
 <script>
 import { ref, computed, onMounted } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
-import { useTitle } from '@vueuse/core'
+import { useHead } from '@vueuse/head'
+import previewImgUrl from '../assets/preview.jpg'
 
 export default {
   setup() {
+    useHead({
+      title: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼',
+      meta: [
+        { name: 'description', content: '施了魔法的照片，留下當下的美好...' },
+        { property: 'og:url', content: location.href },
+        { property: 'og:title', content: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼' },
+        { property: 'og:description', content: '施了魔法的照片，留下當下的美好...' },
+        { property: 'og:image', content: import.meta.env.BASE_URL+previewImgUrl.slice(1) },
+        { name: 'twitter:card', content: 'summary' },
+      ],
+    })
+
     const banner = ref(null)
     const form = ref(null)
     const showBottomBtn = ref(false)
@@ -101,8 +114,6 @@ export default {
       }, { threshold: 0.8 })
       observer.observe(form.value.$el)
     }
-
-    useTitle('拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼')
 
     onMounted(() => {
       useObserveBanner()
