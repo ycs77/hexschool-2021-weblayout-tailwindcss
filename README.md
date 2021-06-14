@@ -9,6 +9,17 @@
 * [vite-plugin-icons](https://github.com/antfu/vite-plugin-icons)：快速使用 [Iconify](https://github.com/iconify/iconify) 打包的現在知名的 Icon 套件 (包括 [Font Awesome](https://fontawesome.com/)、[Material Design Icons](https://fonts.google.com/icons)、[HeroIcons](https://heroicons.com/) 等)
 * [Headless UI](https://headlessui.dev/)：為 Tailwind CSS 設計的 Vue / React 無樣式組件庫
 
+## 線上瀏覽
+
+[Demo](https://hexschool-2021-weblayout-tailwindcss.vercel.app/)
+
+## 安裝
+
+```bash
+yarn
+yarn dev
+```
+
 ## 設計稿來源
 
 感謝六角學院釋出的 UI 設計稿
