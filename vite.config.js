@@ -4,10 +4,20 @@ import components, { HeadlessUiResolver } from 'vite-plugin-components'
 import pages from 'vite-plugin-pages'
 import icons, { ViteIconsResolver } from 'vite-plugin-icons'
 
+export const ssrTransformCustomDirective = () => ({ props: [], needRuntime: true })
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          directiveTransforms: {
+            tippy: ssrTransformCustomDirective,
+          },
+        },
+      }
+    }),
     components({
       customComponentResolvers: [
         HeadlessUiResolver(),

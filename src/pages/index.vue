@@ -61,7 +61,7 @@ export default {
       title: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼',
       meta: [
         { name: 'description', content: '施了魔法的照片，留下當下的美好...' },
-        { property: 'og:url', content: location.href },
+        { property: 'og:url', content: import.meta.env.BASE_URL },
         { property: 'og:title', content: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼' },
         { property: 'og:description', content: '施了魔法的照片，留下當下的美好...' },
         { property: 'og:image', content: import.meta.env.BASE_URL+previewImgUrl.slice(1) },

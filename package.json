@@ -3,7 +3,7 @@
   "license": "CC0-1.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite-ssg build",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "@iconify/json": "^1.1.355",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
+    "@vue/server-renderer": "^3.1.1",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.2",
     "postcss-import": "^14.0.2",
@@ -26,6 +27,7 @@
     "vite": "^2.3.7",
     "vite-plugin-components": "^0.11.1",
     "vite-plugin-icons": "^0.6.1",
-    "vite-plugin-pages": "^0.13.1"
+    "vite-plugin-pages": "^0.13.1",
+    "vite-ssg": "^0.11.2"
   }
 }
