@@ -66,6 +66,9 @@ export default {
         { property: 'og:description', content: '施了魔法的照片，留下當下的美好...' },
         { property: 'og:image', content: previewImgUrl },
         { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:title', content: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼' },
+        { name: 'twitter:description', content: '施了魔法的照片，留下當下的美好...' },
+        { name: 'twitter:image', content: previewImgUrl },
       ],
     })
 
