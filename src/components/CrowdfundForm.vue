@@ -61,20 +61,22 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
-  data() {
-    return {
-      isValidated: false,
-    }
-  },
-  methods: {
-    handleSubmit() {
-      if (!this.$refs.form.checkValidity()) {
-        this.isValidated = true
+  setup() {
+    const form = ref(null)
+    const isValidated = ref(false)
+
+    function handleSubmit() {
+      if (!form.value.checkValidity()) {
+        isValidated.value = true
       } else {
         location.href = location.href
       }
-    },
+    }
+
+    return { form, isValidated, handleSubmit }
   },
 }
 </script>

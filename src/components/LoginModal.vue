@@ -90,6 +90,8 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
   props: {
     modelValue: {
@@ -98,22 +100,23 @@ export default {
     },
   },
   emits: ['update:modelValue'],
-  data() {
-    return {
-      isValidated: false,
+  setup(props, { emit }) {
+    const form = ref(null)
+    const isValidated = ref(false)
+
+    function closeModal() {
+      emit('update:modelValue', false)
     }
-  },
-  methods: {
-    closeModal() {
-      this.$emit('update:modelValue', false)
-    },
-    handleSubmit() {
-      if (!this.$refs.form.checkValidity()) {
-        this.isValidated = true
+
+    function handleSubmit() {
+      if (!form.value.checkValidity()) {
+        isValidated.value = true
       } else {
         location.href = location.href
       }
-    },
+    }
+
+    return { form, isValidated, closeModal, handleSubmit }
   },
 }
 </script>

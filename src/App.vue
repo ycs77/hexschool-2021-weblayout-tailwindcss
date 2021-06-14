@@ -66,17 +66,18 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
-  data() {
-    return {
-      showNav: false,
-      showLoginModal: false,
+  setup() {
+    const showNav = ref(false)
+    const showLoginModal = ref(false)
+
+    function openLoginModal() {
+      showLoginModal.value = true
     }
-  },
-  methods: {
-    openLoginModal() {
-      this.showLoginModal = true
-    },
+
+    return { showNav, showLoginModal, openLoginModal }
   },
 }
 </script>

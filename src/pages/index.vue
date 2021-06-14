@@ -50,61 +50,67 @@
 </template>
 
 <script>
+import { ref, computed, onMounted } from 'vue'
+import { onBeforeRouteUpdate } from 'vue-router'
+
 export default {
-  data() {
-    return {
-      showBottomBtn: false,
-      inBanner: false,
-      inForm: false,
-    }
-  },
-  methods: {
-    scrollToNavbar() {
-      window.scrollTo({ top: this.navbarTop(), behavior: 'smooth' })
-    },
-    scrollToForm() {
-      window.scrollTo({ top: this.formTop() - 72, behavior: 'smooth' })
-    },
+  setup() {
+    const banner = ref(null)
+    const form = ref(null)
+    const showBottomBtn = ref(false)
+    const inBanner = ref(false)
+    const inForm = ref(false)
 
-    navbarTop() {
-      const el = this.$refs.banner.$el
+    const navbarTop = computed(() => {
+      const el = banner.value.$el
       return el.offsetTop + el.clientHeight
-    },
-    formTop() {
-      const el = this.$refs.form.$el
+    })
+    const formTop = computed(() => {
+      const el = form.value.$el
       return el ? el.offsetTop : 0
-    },
+    })
 
-    updateShowBottomBtnWithObserver() {
-      this.showBottomBtn = !this.inBanner && !this.inForm
-    },
+    function scrollToNavbar() {
+      window.scrollTo({ top: navbarTop.value, behavior: 'smooth' })
+    }
+    function scrollToForm() {
+      window.scrollTo({ top: formTop.value - 72, behavior: 'smooth' })
+    }
 
-    observeBanner() {
+    function updateShowBottomBtnWithObserver() {
+      showBottomBtn.value = !inBanner.value && !inForm.value
+    }
+
+    function useObserveBanner() {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          this.inBanner = entry.isIntersecting
-          this.updateShowBottomBtnWithObserver()
+          inBanner.value = entry.isIntersecting
+          updateShowBottomBtnWithObserver()
         })
       }, { rootMargin: '-1px 0px 0px 0px' })
-      observer.observe(this.$refs.banner.$el)
-    },
+      observer.observe(banner.value.$el)
+    }
 
-    observeForm() {
+    function useObserveForm() {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          this.inForm = entry.isIntersecting
-          this.updateShowBottomBtnWithObserver()
+          inForm.value = entry.isIntersecting
+          updateShowBottomBtnWithObserver()
         })
       }, { threshold: 0.8 })
-      observer.observe(this.$refs.form.$el)
-    },
-  },
-  mounted() {
-    this.observeBanner()
-    this.observeForm()
-  },
-  beforeRouteUpdate(to, from) {
-    this.scrollToNavbar()
+      observer.observe(form.value.$el)
+    }
+
+    onMounted(() => {
+      useObserveBanner()
+      useObserveForm()
+    })
+
+    onBeforeRouteUpdate((to, from) => {
+      scrollToNavbar()
+    })
+
+    return { banner, form, showBottomBtn, scrollToForm }
   },
 }
 </script>
