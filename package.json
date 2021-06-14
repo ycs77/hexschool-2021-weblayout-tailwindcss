@@ -9,7 +9,6 @@
     "@headlessui/vue": "^1.2.0",
     "@tailwindcss/forms": "^0.3.3",
     "tailwindcss": "^2.1.4",
-    "vee-validate": "^4.4.4",
     "vue": "^3.0.5",
     "vue-router": "^4.0.8",
     "vue-tippy": "^6.0.0-alpha.30"

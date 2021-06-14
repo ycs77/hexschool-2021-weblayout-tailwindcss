@@ -1,20 +1,34 @@
 @layer components {
   label {
     @apply text-gray-900 text-sm lg:text-base;
-  }
 
-  input, select {
-    @apply w-full px-4 py-2 text-[#999999] bg-[#F7F7F7] rounded !important;
-    @apply border-[#F7F7F7] focus:border-yellow !important;
-    @apply focus:ring-4 focus:ring-light-yellow !important;
-
-    &.form-control-error {
-      @apply border-red focus:border-red !important;
-      @apply focus:ring-light-red !important;
+    + input,
+    + select {
+      @apply mt-2;
     }
   }
 
+  input,
+  select {
+    @apply w-full px-4 py-2 text-[#999999] bg-[#F7F7F7] rounded !important;
+    @apply border-[#F7F7F7] focus:border-yellow !important;
+    @apply transition-shadow duration-100;
+    @apply focus:ring-4 focus:ring-light-yellow !important;
+  }
+
   .form-error {
-    @apply mt-1 text-red text-sm;
+    @apply hidden mt-1 text-red text-sm;
+  }
+
+  form.was-validated {
+    input:invalid,
+    select:invalid {
+      @apply border-red focus:border-red !important;
+      @apply focus:ring-light-red !important;
+
+      + .form-error {
+        @apply block;
+      }
+    }
   }
 }
