@@ -6,7 +6,11 @@
           <img class="h-10 ml-1" src="./assets/logo.jpg" alt="拚拚 Logo" />
         </RouterLink>
 
-        <button class="lg:hidden" type="button" @click="showNav = !showNav">
+        <button
+          class="lg:hidden"
+          type="button"
+          @click="showNav = !showNav"
+        >
           <i-mdi-menu class="w-8 h-8" />
         </button>
       </div>
@@ -31,10 +35,18 @@
         </ul>
 
         <div class="grid grid-cols-2 gap-4">
-          <button class="btn btn-primary px-8 py-1 font-bold" type="button">
+          <button
+            class="btn btn-primary px-8 py-1 font-bold"
+            type="button"
+            @click="openLoginModal"
+          >
             登入
           </button>
-          <button class="btn btn-secondary px-8 py-1 font-bold" type="button">
+
+          <button
+            class="btn btn-secondary px-8 py-1 font-bold"
+            type="button"
+          >
             註冊
           </button>
         </div>
@@ -49,14 +61,22 @@
       Copyright &copy; 拼拼 All rights reserved.
     </div>
   </footer>
+
+  <LoginModal v-model="showLoginModal" />
 </template>
 
 <script>
 export default {
   data() {
     return {
-      showNav: false
+      showNav: false,
+      showLoginModal: false,
     }
+  },
+  methods: {
+    openLoginModal() {
+      this.showLoginModal = true
+    },
   },
 }
 </script>
