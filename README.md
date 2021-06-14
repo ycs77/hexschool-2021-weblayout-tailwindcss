@@ -1,4 +1,4 @@
-# Tailwind CSS 實作練習 六角學院 2021 募資網站
+# 用 Tailwind CSS 刻六角學院 2021 募資網站
 
 ![網頁預覽](./screen.jpg)
 
