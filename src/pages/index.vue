@@ -52,6 +52,7 @@
 <script>
 import { ref, computed, onMounted } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
+import { useTitle } from '@vueuse/core'
 
 export default {
   setup() {
@@ -100,6 +101,8 @@ export default {
       }, { threshold: 0.8 })
       observer.observe(form.value.$el)
     }
+
+    useTitle('拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼')
 
     onMounted(() => {
       useObserveBanner()
