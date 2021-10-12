@@ -1,2 +1,0 @@
-tippy-box
-tippy-content

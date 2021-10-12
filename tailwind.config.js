@@ -1,10 +1,12 @@
 module.exports = {
   mode: 'jit',
-  purge: [
-    './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
-    './src/style/safelist.txt',
-  ],
+  purge: {
+    content: [
+      './index.html',
+      './src/**/*.{vue,js,ts,jsx,tsx}',
+    ],
+    safelist: ['tippy-box', 'tippy-content'],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
