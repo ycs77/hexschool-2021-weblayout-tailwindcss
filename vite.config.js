@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import components, { HeadlessUiResolver } from 'vite-plugin-components'
+import components from 'unplugin-vue-components/vite'
+import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 import pages from 'vite-plugin-pages'
 import icons, { ViteIconsResolver } from 'vite-plugin-icons'
 
@@ -20,7 +21,7 @@ export default defineConfig({
       }
     }),
     components({
-      customComponentResolvers: [
+      resolvers: [
         HeadlessUiResolver(),
         ViteIconsResolver(),
       ],
