@@ -30,4 +30,13 @@ export default defineConfig({
     pages(),
     icons(),
   ],
+  optimizeDeps: {
+    include: [
+      'vue',
+      'vue-router',
+      'vue-tippy',
+      '@headlessui/vue',
+      '@vueuse/head',
+    ],
+  },
 })
