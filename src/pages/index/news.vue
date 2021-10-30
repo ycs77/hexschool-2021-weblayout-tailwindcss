@@ -1,7 +1,7 @@
 <template>
   <ul class="space-y-4">
     <li class="flex border border-gray-100 rounded-lg overflow-hidden">
-      <img class="w-[135px] lg:w-[220px] object-cover" src="../../assets/news01.jpg" alt="高雄體驗會｜免費參加送帆布袋 縮圖">
+      <img class="w-[135px] lg:w-[220px] object-cover" src="@/assets/news01.jpg" alt="高雄體驗會｜免費參加送帆布袋 縮圖">
       <div class="p-4">
         <h4 class="font-bold tracking-[0.7px] lg:tracking-[0.8px]">
           高雄體驗會｜免費參加送帆布袋
@@ -19,7 +19,7 @@
     </li>
 
     <li class="flex border border-gray-100 rounded-lg overflow-hidden">
-      <img class="w-[135px] lg:w-[220px] object-cover" src="../../assets/news02.jpg" alt="高雄體驗會｜免費參加送帆布袋 縮圖">
+      <img class="w-[135px] lg:w-[220px] object-cover" src="@/assets/news02.jpg" alt="高雄體驗會｜免費參加送帆布袋 縮圖">
       <div class="p-4">
         <h4 class="font-bold tracking-[0.7px] lg:tracking-[0.8px]">
           高雄體驗會｜免費參加送帆布袋
@@ -37,7 +37,7 @@
     </li>
 
     <li class="flex border border-gray-100 rounded-lg overflow-hidden">
-      <img class="w-[135px] lg:w-[220px] object-cover" src="../../assets/news03.jpg" alt="高雄體驗會｜免費參加送帆布袋 縮圖">
+      <img class="w-[135px] lg:w-[220px] object-cover" src="@/assets/news03.jpg" alt="高雄體驗會｜免費參加送帆布袋 縮圖">
       <div class="p-4">
         <h4 class="font-bold tracking-[0.7px] lg:tracking-[0.8px]">
           高雄體驗會｜免費參加送帆布袋

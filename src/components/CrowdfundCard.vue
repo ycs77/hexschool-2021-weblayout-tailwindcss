@@ -1,6 +1,6 @@
 <template>
   <div class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
-    <img src="../assets/plan_img.jpg" alt="">
+    <img src="@/assets/plan_img.jpg" alt="">
     <div class="pt-2 pb-4 px-4 ">
       <div class="flex justify-between">
         <span class="text-gray-600 text-sm tracking-[2px]">限時優惠</span>

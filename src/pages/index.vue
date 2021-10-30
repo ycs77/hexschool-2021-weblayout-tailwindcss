@@ -53,7 +53,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
 import { useHead } from '@vueuse/head'
-import previewImgUrl from '../assets/preview.jpg'
+import previewImgUrl from '@/assets/preview.jpg'
 
 export default {
   setup() {

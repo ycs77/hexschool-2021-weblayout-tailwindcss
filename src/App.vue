@@ -3,7 +3,7 @@
     <div class="container lg:flex">
       <div class="flex justify-between lg:flex-grow-0">
         <RouterLink to="/">
-          <img class="h-10 ml-1" src="./assets/logo.jpg" alt="拚拚 Logo" />
+          <img class="h-10 ml-1" src="@/assets/logo.jpg" alt="拚拚 Logo" />
         </RouterLink>
 
         <button

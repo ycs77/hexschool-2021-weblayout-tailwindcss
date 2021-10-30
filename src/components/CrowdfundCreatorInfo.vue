@@ -1,7 +1,7 @@
 <template>
   <div class="p-4 border border-gray-100 rounded-lg">
     <div class="flex items-center">
-      <img class="w-[73px] h-[73px] lg:w-[100px] lg:h-[100px] border-3 border-yellow rounded-full" src="../assets/store_img.jpg" alt="缺錢事務所 的大頭照">
+      <img class="w-[73px] h-[73px] lg:w-[100px] lg:h-[100px] border-3 border-yellow rounded-full" src="@/assets/store_img.jpg" alt="缺錢事務所 的大頭照">
 
       <div class="ml-4">
         <div class="text-lg lg:text-xl font-medium tracking-[1.8px] lg:tracking-[2px]">

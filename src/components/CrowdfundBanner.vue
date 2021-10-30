@@ -11,7 +11,7 @@
 
       <div class="mt-4 lg:mt-6 grid lg:grid-cols-12 gap-4 lg:gap-6">
         <div class="lg:col-span-7">
-          <img src="../assets/produt_image.jpg" alt="產品圖片">
+          <img src="@/assets/produt_image.jpg" alt="產品圖片">
         </div>
 
         <div class="lg:col-span-5">
@@ -47,19 +47,19 @@
 
           <div class="lg:mt-2 flex h-9 space-x-5 overflow-x-auto">
             <button class="flex items-center" v-tippy="{ content: '認證標章' }">
-              <img class="w-5 lg:w-6" src="../assets/icon_good01.svg" alt="認證標章 icon">
+              <img class="w-5 lg:w-6" src="@/assets/icon_good01.svg" alt="認證標章 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">認證標章</div>
             </button>
             <button class="flex items-center" v-tippy="{ content: '品質保證' }">
-              <img class="w-5 lg:w-6" src="../assets/icon_good02.svg" alt="品質保證 icon">
+              <img class="w-5 lg:w-6" src="@/assets/icon_good02.svg" alt="品質保證 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">品質保證</div>
             </button>
             <button class="flex items-center" v-tippy="{ content: '原生創意' }">
-              <img class="w-5 lg:w-6" src="../assets/icon_good03.svg" alt="原生創意 icon">
+              <img class="w-5 lg:w-6" src="@/assets/icon_good03.svg" alt="原生創意 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">原生創意</div>
             </button>
             <button class="flex items-center" v-tippy="{ content: '人氣王' }">
-              <img class="w-5 lg:w-6" src="../assets/icon_good04.svg" alt="人氣王 icon">
+              <img class="w-5 lg:w-6" src="@/assets/icon_good04.svg" alt="人氣王 icon">
               <div class="block lg:hidden ml-2 text-xs text-gray-600 whitespace-nowrap">人氣王</div>
             </button>
           </div>

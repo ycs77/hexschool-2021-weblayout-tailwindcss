@@ -7,7 +7,7 @@
     <ul class="space-y-4">
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="../../assets/user_img01.jpg" alt="廖小杰 的大頭照">
+          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img01.jpg" alt="廖小杰 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               廖小杰
@@ -34,7 +34,7 @@
 
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="../../assets/user_img02.jpg" alt="卡阿伯 的大頭照">
+          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img02.jpg" alt="卡阿伯 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               卡阿伯
@@ -52,7 +52,7 @@
 
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="../../assets/user_img02.jpg" alt="賈師 的大頭照">
+          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img02.jpg" alt="賈師 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               賈師
@@ -70,7 +70,7 @@
 
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="../../assets/user_img02.jpg" alt="俊俊 的大頭照">
+          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img02.jpg" alt="俊俊 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               Lucas
