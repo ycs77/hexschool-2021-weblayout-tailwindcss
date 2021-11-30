@@ -1,10 +1,10 @@
 import path from 'path'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import components from 'unplugin-vue-components/vite'
+import Vue from '@vitejs/plugin-vue'
+import Components from 'unplugin-vue-components/vite'
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
-import pages from 'vite-plugin-pages'
-import icons from 'unplugin-icons/vite'
+import Pages from 'vite-plugin-pages'
+import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
 export const ssrTransformCustomDirective = () => ({ props: [], needRuntime: true })
@@ -18,7 +18,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue({
+    Vue({
       template: {
         compilerOptions: {
           directiveTransforms: {
@@ -27,14 +27,14 @@ export default defineConfig({
         },
       }
     }),
-    components({
+    Components({
       resolvers: [
         HeadlessUiResolver(),
         IconsResolver(),
       ],
     }),
-    pages(),
-    icons(),
+    Pages(),
+    Icons(),
   ],
   optimizeDeps: {
     include: [
