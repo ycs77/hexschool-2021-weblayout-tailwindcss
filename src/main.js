@@ -1,5 +1,5 @@
 import { ViteSSG } from 'vite-ssg'
-import routes from 'virtual:generated-pages'
+import routes from '~pages'
 import App from './App.vue'
 import VueTippy from 'vue-tippy'
 import 'tippy.js/dist/tippy.css'
