@@ -8,9 +8,9 @@
     <img class="mx-auto" src="@/assets/icon_heart.svg" alt="贊助專案 icon">
     <h2 class="mt-2.5 text-xl lg:text-2xl text-center tracking-[1.6px] font-bold overflow-hidden">
       <span class="inline-block relative">
-        <div class="absolute top-1/2 right-full w-[1000px] h-[3px] mr-3 bg-yellow transform -translate-y-1/2"></div>
+        <div class="absolute top-1/2 right-full w-[1000px] h-[3px] mr-3 bg-yellow -translate-y-1/2"></div>
         贊助專案
-        <div class="absolute top-1/2 left-full w-[1000px] h-[3px] ml-3 bg-yellow transform -translate-y-1/2"></div>
+        <div class="absolute top-1/2 left-full w-[1000px] h-[3px] ml-3 bg-yellow -translate-y-1/2"></div>
       </span>
     </h2>
 

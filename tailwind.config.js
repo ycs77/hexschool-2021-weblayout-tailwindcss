@@ -1,15 +1,14 @@
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      './index.html',
-      './src/**/*.{vue,js,ts,jsx,tsx}',
-    ],
-    safelist: ['tippy-box', 'tippy-content'],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './index.html',
+    './src/**/*.{vue,js,ts,jsx,tsx}',
+  ],
   theme: {
     colors: {
+      inherit: 'inherit',
+      current: 'currentColor',
+      transparent: 'transparent',
+
       white: '#FFFFFF',
       black: '#000000',
 
@@ -59,9 +58,6 @@ module.exports = {
         'bottom-btn': '0 -2px 4px 0 rgba(0, 0, 0, 0.10)',
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),

@@ -4,7 +4,7 @@
       <img src="@/assets/p1.jpg" alt="施了魔法的照片">
 
       <h2 class="mt-4 lg:mt-6 text-xl lg:text-2xl tracking-[1.6px] font-bold">
-        <span class="inline-block mr-3.5 w-[4px] h-[21px] lg:h-[28px] bg-yellow transform translate-y-1"></span>施了魔法的照片
+        <span class="inline-block mr-3.5 w-[4px] h-[21px] lg:h-[28px] bg-yellow translate-y-1"></span>施了魔法的照片
       </h2>
 
       <p class="mt-2 lg:mt-1.5 text-justify leading-8">
@@ -16,7 +16,7 @@
       <img class="mt-4 lg:mt-6" src="@/assets/p2.jpg" alt="留下當下的美好">
 
       <h2 class="mt-4 lg:mt-6 text-xl lg:text-2xl tracking-[1.6px] font-bold">
-        <span class="inline-block mr-3.5 w-[4px] h-[21px] lg:h-[28px] bg-yellow transform translate-y-1"></span>留下當下的美好
+        <span class="inline-block mr-3.5 w-[4px] h-[21px] lg:h-[28px] bg-yellow translate-y-1"></span>留下當下的美好
       </h2>
 
       <p class="mt-2 lg:mt-1.5 text-justify leading-8">

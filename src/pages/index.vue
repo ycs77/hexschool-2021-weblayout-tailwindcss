@@ -11,11 +11,11 @@
           <RouterView v-slot="{ Component }">
             <transition
               enter-active-class="transition duration-200 ease-out"
-              enter-from-class="transform opacity-0"
-              enter-to-class="transform opacity-100"
+              enter-from-class="opacity-0"
+              enter-to-class="opacity-100"
               leave-active-class="transition duration-100 ease-in"
-              leave-from-class="transform opacity-100"
-              leave-to-class="transform opacity-0"
+              leave-from-class="opacity-100"
+              leave-to-class="opacity-0"
               mode="out-in"
             >
               <component :is="Component" />
@@ -35,11 +35,11 @@
 
     <transition
       enter-active-class="transition duration-300 ease-out"
-      enter-from-class="transform opacity-0"
-      enter-to-class="transform opacity-100"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
       leave-active-class="transition duration-150 ease-in"
-      leave-from-class="transform opacity-100"
-      leave-to-class="transform opacity-0"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
     >
       <button v-if="showBottomBtn" class="lg:hidden fixed inset-x-0 bottom-0 btn btn-primary w-full py-2.5 font-bold tracking-[1.6px] rounded-none shadow-bottom-btn" type="button" @click="scrollToForm">
         贊助專案
