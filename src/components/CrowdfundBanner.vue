@@ -75,10 +75,10 @@
             </button>
             <div class="mt-2 grid grid-cols-10 gap-2">
               <button class="btn btn-lg btn-secondary w-full col-span-5 lg:col-span-6" type="button">
-                <i-fa-solid-heart class="w-[18px] h-[18px] mr-2" />追蹤專案
+                <FaSolidHeart class="w-[18px] h-[18px] mr-2" />追蹤專案
               </button>
               <button class="btn btn-lg btn-secondary w-full col-span-5 lg:col-span-4" type="button">
-                <i-fa-solid-share-alt class="w-5 h-5 mr-2" />分享
+                <FaSolidShareAlt class="w-5 h-5 mr-2" />分享
               </button>
             </div>
           </div>

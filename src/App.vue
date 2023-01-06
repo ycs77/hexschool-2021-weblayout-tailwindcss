@@ -11,7 +11,7 @@
           type="button"
           @click="showNav = !showNav"
         >
-          <i-mdi-menu class="w-8 h-8" />
+          <MdiMenu class="w-8 h-8" />
         </button>
       </div>
 

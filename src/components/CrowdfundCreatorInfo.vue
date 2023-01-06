@@ -20,16 +20,16 @@
     <div class="mt-4 flex justify-between">
       <div class="space-x-2">
         <a class="inline-flex justify-center items-center w-[30px] h-[30px] bg-gray-500 text-white rounded-full" href="#fb-link" @click.prevent>
-          <i-fa-brands-facebook-f class="w-auto h-4" />
+          <FaBrandsFacebookF class="w-auto h-4" />
         </a>
 
         <a class="inline-flex justify-center items-center w-[30px] h-[30px] bg-gray-500 text-white rounded-full" href="#youtube-link" @click.prevent>
-          <i-fa-brands-youtube class="w-auto h-4" />
+          <FaBrandsYoutube class="w-auto h-4" />
         </a>
       </div>
 
       <button class="btn btn-secondary w-auto px-4 py-1.5 border text-xs" type="button">
-        <i-fa-regular-comment-dots class="w-auto h-3 mr-1" />聯絡我們
+        <FaRegularCommentDots class="w-auto h-3 mr-1" />聯絡我們
       </button>
     </div>
   </div>

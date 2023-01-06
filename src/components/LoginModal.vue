@@ -37,7 +37,7 @@
                   class="text-black transition-colors duration-100 text-opacity-20 hover:text-opacity-40"
                   @click="closeModal"
                 >
-                  <i-mdi-close class="w-7 h-7" />
+                  <MdiClose class="w-7 h-7" />
                 </button>
               </DialogTitle>
 

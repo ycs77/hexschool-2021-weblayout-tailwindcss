@@ -30,7 +30,9 @@ export default defineConfig({
     Components({
       resolvers: [
         HeadlessUiResolver(),
-        IconsResolver(),
+        IconsResolver({
+          prefix: '',
+        }),
       ],
     }),
     Pages(),

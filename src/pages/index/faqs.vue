@@ -13,7 +13,7 @@
               {{ faq.title }}
             </span>
           </div>
-          <i-heroicons-solid-chevron-down
+          <HeroiconsSolidChevronDown
             class="inline-block transition-transform"
             :class="open ? '-rotate-180' : 'rotate-0'"
           />
