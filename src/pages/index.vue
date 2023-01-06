@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <CrowdfundBanner ref="banner" />
 
     <CrowdfundNavbar class="sticky top-0 z-10 bg-white" />
@@ -45,89 +44,82 @@
         贊助專案
       </button>
     </transition>
-
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, computed, onMounted } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import previewImgUrl from '@/assets/preview.jpg'
 
-export default {
-  setup() {
-    useHead({
-      title: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼',
-      meta: [
-        { name: 'description', content: '施了魔法的照片，留下當下的美好...' },
-        { property: 'og:url', content: import.meta.env.BASE_URL },
-        { property: 'og:title', content: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼' },
-        { property: 'og:description', content: '施了魔法的照片，留下當下的美好...' },
-        { property: 'og:image', content: previewImgUrl },
-        { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:title', content: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼' },
-        { name: 'twitter:description', content: '施了魔法的照片，留下當下的美好...' },
-        { name: 'twitter:image', content: previewImgUrl },
-      ],
-    })
+useHead({
+  title: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼',
+  meta: [
+    { name: 'description', content: '施了魔法的照片，留下當下的美好...' },
+    { property: 'og:url', content: import.meta.env.BASE_URL },
+    { property: 'og:title', content: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼' },
+    { property: 'og:description', content: '施了魔法的照片，留下當下的美好...' },
+    { property: 'og:image', content: previewImgUrl },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: '拍出會動的照片｜LivePhotos 魔法拍立得 - 拼拼' },
+    { name: 'twitter:description', content: '施了魔法的照片，留下當下的美好...' },
+    { name: 'twitter:image', content: previewImgUrl },
+  ],
+})
 
-    const banner = ref(null)
-    const form = ref(null)
-    const showBottomBtn = ref(false)
-    const inBanner = ref(false)
-    const inForm = ref(false)
+const banner = ref(null)
+const form = ref(null)
+const showBottomBtn = ref(false)
+const inBanner = ref(false)
+const inForm = ref(false)
 
-    const navbarTop = computed(() => {
-      const el = banner.value.$el
-      return el.offsetTop + el.clientHeight
-    })
-    const formTop = computed(() => {
-      const el = form.value.$el
-      return el ? el.offsetTop : 0
-    })
+const navbarTop = computed(() => {
+  const el = banner.value.$el
+  return el.offsetTop + el.clientHeight
+})
+const formTop = computed(() => {
+  const el = form.value.$el
+  return el ? el.offsetTop : 0
+})
 
-    function scrollToNavbar() {
-      window.scrollTo({ top: navbarTop.value, behavior: 'smooth' })
-    }
-    function scrollToForm() {
-      window.scrollTo({ top: formTop.value - 72, behavior: 'smooth' })
-    }
-
-    function updateShowBottomBtnWithObserver() {
-      showBottomBtn.value = !inBanner.value && !inForm.value
-    }
-
-    function useObserveBanner() {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          inBanner.value = entry.isIntersecting
-          updateShowBottomBtnWithObserver()
-        })
-      }, { rootMargin: '-1px 0px 0px 0px' })
-      observer.observe(banner.value.$el)
-    }
-
-    function useObserveForm() {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          inForm.value = entry.isIntersecting
-          updateShowBottomBtnWithObserver()
-        })
-      }, { threshold: 0.8 })
-      observer.observe(form.value.$el)
-    }
-
-    onMounted(() => {
-      useObserveBanner()
-      useObserveForm()
-    })
-
-    onBeforeRouteUpdate((to, from) => {
-      scrollToNavbar()
-    })
-
-    return { banner, form, showBottomBtn, scrollToForm }
-  },
+function scrollToNavbar() {
+  window.scrollTo({ top: navbarTop.value, behavior: 'smooth' })
 }
+function scrollToForm() {
+  window.scrollTo({ top: formTop.value - 72, behavior: 'smooth' })
+}
+
+function updateShowBottomBtnWithObserver() {
+  showBottomBtn.value = !inBanner.value && !inForm.value
+}
+
+function useObserveBanner() {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      inBanner.value = entry.isIntersecting
+      updateShowBottomBtnWithObserver()
+    })
+  }, { rootMargin: '-1px 0px 0px 0px' })
+  observer.observe(banner.value.$el)
+}
+
+function useObserveForm() {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      inForm.value = entry.isIntersecting
+      updateShowBottomBtnWithObserver()
+    })
+  }, { threshold: 0.8 })
+  observer.observe(form.value.$el)
+}
+
+onMounted(() => {
+  useObserveBanner()
+  useObserveForm()
+})
+
+onBeforeRouteUpdate((to, from) => {
+  scrollToNavbar()
+})
 </script>

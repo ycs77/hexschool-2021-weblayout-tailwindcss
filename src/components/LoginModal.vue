@@ -89,34 +89,30 @@
   </TransitionRoot>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 
-export default {
-  props: {
-    modelValue: {
-      type: Boolean,
-      default: false,
-    },
+const props = defineProps({
+  modelValue: {
+    type: Boolean,
+    default: false,
   },
-  emits: ['update:modelValue'],
-  setup(props, { emit }) {
-    const form = ref(null)
-    const isValidated = ref(false)
+})
 
-    function closeModal() {
-      emit('update:modelValue', false)
-    }
+const emit = defineEmits(['update:modelValue'])
 
-    function handleSubmit() {
-      if (!form.value.checkValidity()) {
-        isValidated.value = true
-      } else {
-        location.href = location.href
-      }
-    }
+const form = ref(null)
+const isValidated = ref(false)
 
-    return { form, isValidated, closeModal, handleSubmit }
-  },
+function closeModal() {
+  emit('update:modelValue', false)
+}
+
+function handleSubmit() {
+  if (!form.value.checkValidity()) {
+    isValidated.value = true
+  } else {
+    location.href = location.href
+  }
 }
 </script>

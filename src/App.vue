@@ -65,19 +65,13 @@
   <LoginModal v-model="showLoginModal" />
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 
-export default {
-  setup() {
-    const showNav = ref(false)
-    const showLoginModal = ref(false)
+const showNav = ref(false)
+const showLoginModal = ref(false)
 
-    function openLoginModal() {
-      showLoginModal.value = true
-    }
-
-    return { showNav, showLoginModal, openLoginModal }
-  },
+function openLoginModal() {
+  showLoginModal.value = true
 }
 </script>
