@@ -7,9 +7,6 @@ import Pages from 'vite-plugin-pages'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
-export const ssrTransformCustomDirective = () => ({ props: [], needRuntime: true })
-
-// https://vitejs.dev/config/
 export default defineConfig({
   base: process.env.BASE_URL || '/',
   resolve: {
@@ -22,10 +19,10 @@ export default defineConfig({
       template: {
         compilerOptions: {
           directiveTransforms: {
-            tippy: ssrTransformCustomDirective,
+            tippy: () => ({ props: [], needRuntime: true }),
           },
         },
-      }
+      },
     }),
     Components({
       resolvers: [
