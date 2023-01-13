@@ -1,15 +1,10 @@
 import { ViteSSG } from 'vite-ssg'
+import tippy from 'vue-tippy'
 import routes from '~pages'
 import App from './App.vue'
-import VueTippy from 'vue-tippy'
 import 'tippy.js/dist/tippy.css'
 import './style/main.css'
 
-// https://github.com/antfu/vite-ssg
-export const createApp = ViteSSG(
-  App,
-  { routes },
-  ({ app }) => {
-    app.use(VueTippy)
-  }
-)
+export const createApp = ViteSSG(App, { routes }, ({ app }) => {
+  app.use(tippy)
+})
