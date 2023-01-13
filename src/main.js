@@ -6,5 +6,10 @@ import 'tippy.js/dist/tippy.css'
 import './style/main.css'
 
 export const createApp = ViteSSG(App, { routes }, ({ app }) => {
-  app.use(tippy)
+  app.use(tippy, {
+    defaultProps: {
+      placement: 'top',
+      hideOnClick: false,
+    },
+  })
 })
