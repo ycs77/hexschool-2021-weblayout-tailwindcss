@@ -1,24 +1,20 @@
 <template>
   <TransitionRoot appear :show="modelValue" as="template">
-    <Dialog :open="modelValue" as="div" @close="closeModal">
-      <div class="fixed inset-0 z-10 overflow-y-auto">
-        <div class="min-h-screen px-4 text-center">
-          <TransitionChild
-            as="template"
-            enter="duration-300 ease-out"
-            enter-from="opacity-0"
-            enter-to="opacity-100"
-            leave="duration-200 ease-in"
-            leave-from="opacity-100"
-            leave-to="opacity-0"
-          >
-            <DialogOverlay class="fixed inset-0 bg-black bg-opacity-70" />
-          </TransitionChild>
+    <Dialog as="div" @close="closeModal" class="relative z-10">
+      <TransitionChild
+        as="template"
+        enter="duration-300 ease-out"
+        enter-from="opacity-0"
+        enter-to="opacity-100"
+        leave="duration-200 ease-in"
+        leave-from="opacity-100"
+        leave-to="opacity-0"
+      >
+        <div class="fixed inset-0 bg-black bg-opacity-70" />
+      </TransitionChild>
 
-          <span class="inline-block h-screen align-middle" aria-hidden="true">
-            &#8203;
-          </span>
-
+      <div class="fixed inset-0 overflow-y-auto">
+        <div class="flex min-h-full items-center justify-center p-4 text-center">
           <TransitionChild
             as="template"
             enter="duration-300 ease-out"
@@ -28,7 +24,7 @@
             leave-from="opacity-100 scale-100"
             leave-to="opacity-0 scale-95"
           >
-            <div class="inline-block w-full max-w-[500px] my-8 overflow-hidden text-left align-middle transition-all transform bg-white border-t-4 border-yellow rounded-lg shadow-xl">
+            <DialogPanel class="inline-block w-full max-w-[500px] my-8 overflow-hidden text-left align-middle transition-all transform bg-white border-t-4 border-yellow rounded-lg shadow-xl">
               <DialogTitle as="h3" class="flex justify-between items-center p-4 pt-3 text-2xl font-bold leading-9 text-gray-900 border-b border-[#DEE2E6]">
                 <span>登入</span>
 
@@ -81,7 +77,7 @@
                   </span>
                 </div>
               </div>
-            </div>
+            </DialogPanel>
           </TransitionChild>
         </div>
       </div>
