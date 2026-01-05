@@ -1,6 +1,7 @@
 import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import TailwindCSS from '@tailwindcss/vite'
 import Components from 'unplugin-vue-components/vite'
 import { HeadlessUiResolver } from 'unplugin-vue-components/resolvers'
 import Pages from 'vite-plugin-pages'
@@ -19,6 +20,7 @@ export default defineConfig({
         },
       },
     }),
+    TailwindCSS(),
     Components({
       resolvers: [
         HeadlessUiResolver(),

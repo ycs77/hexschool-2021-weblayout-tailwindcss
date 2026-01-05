@@ -2,7 +2,7 @@
   <div class="bg-gray-50 pt-4 lg:pt-12 pb-8">
     <div class="container">
       <div>
-        <span class="px-4 py-0.5 bg-gray-500 text-white text-xs leading-[18px] rounded">魔法科技</span>
+        <span class="px-4 py-0.5 bg-gray-500 text-white text-xs leading-4.5 rounded-sm">魔法科技</span>
       </div>
 
       <h1 class="mt-2 lg:mt-1 text-gray-700 text-2xl lg:text-[32px] leading-[36px] lg:leading-[47px] font-bold tracking-[2.25px] lg:tracking-[3px]">
@@ -75,10 +75,10 @@
             </button>
             <div class="mt-2 grid grid-cols-10 gap-2">
               <button class="btn btn-lg btn-secondary w-full col-span-5 lg:col-span-6" type="button">
-                <FaSolidHeart class="w-[18px] h-[18px] mr-2" />追蹤專案
+                <FaSolidHeart class="size-4.5 mr-2" />追蹤專案
               </button>
               <button class="btn btn-lg btn-secondary w-full col-span-5 lg:col-span-4" type="button">
-                <FaSolidShareAlt class="w-5 h-5 mr-2" />分享
+                <FaSolidShareAlt class="size-5 mr-2" />分享
               </button>
             </div>
           </div>

@@ -10,7 +10,7 @@
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
-        <div class="fixed inset-0 bg-black bg-opacity-70" />
+        <div class="fixed inset-0 bg-black/70" />
       </TransitionChild>
 
       <div class="fixed inset-0 overflow-y-auto">
@@ -30,10 +30,10 @@
 
                 <button
                   type="button"
-                  class="text-black transition-colors duration-100 text-opacity-20 hover:text-opacity-40"
+                  class="text-black/20 hover:text-black/40 transition-colors duration-100"
                   @click="closeModal"
                 >
-                  <MdiClose class="w-7 h-7" />
+                  <MdiClose class="size-7" />
                 </button>
               </DialogTitle>
 
@@ -71,9 +71,9 @@
 
                 <div class="mt-12 mb-8 text-gray-500 text-center text-sm overflow-hidden">
                   <span class="inline-block relative">
-                    <div class="absolute top-1/2 right-full w-[200px] h-[1px] mr-4 bg-gray-200"></div>
+                    <div class="absolute top-1/2 right-full w-[200px] h-px mr-4 bg-gray-200"></div>
                     還沒有帳號？ <a href="#register" class="text-red hover:text-light-red" @click.prevent>註冊一個帳號</a>
-                    <div class="absolute top-1/2 left-full w-[200px] h-[1px] ml-4 bg-gray-200"></div>
+                    <div class="absolute top-1/2 left-full w-[200px] h-px ml-4 bg-gray-200"></div>
                   </span>
                 </div>
               </div>

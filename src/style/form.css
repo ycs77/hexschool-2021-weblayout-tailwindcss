@@ -10,21 +10,21 @@
 
   input,
   select {
-    @apply w-full px-4 py-2 text-[#999999] bg-[#F7F7F7] rounded !important;
-    @apply border-[#F7F7F7] focus:border-yellow !important;
+    @apply w-full! px-4! py-2! text-[#999999]! bg-[#F7F7F7]! rounded-sm!;
+    @apply border-[#F7F7F7]! focus:border-yellow!;
     @apply transition-shadow duration-100;
-    @apply focus:ring-4 focus:ring-light-yellow !important;
+    @apply focus:ring-4! focus:ring-light-yellow!;
   }
 
   .form-error {
     @apply hidden mt-1 text-red text-sm;
   }
 
-  form.was-validated {
+  .was-validated {
     input:invalid,
     select:invalid {
-      @apply border-red focus:border-red !important;
-      @apply focus:ring-light-red !important;
+      @apply border-red! focus:border-red!;
+      @apply focus:ring-light-red!;
 
       + .form-error {
         @apply block;

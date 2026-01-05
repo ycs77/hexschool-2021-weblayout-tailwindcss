@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+  <div class="border border-gray-200 rounded-2xl shadow-xs overflow-hidden">
     <img src="@/assets/plan_img.jpg" alt="">
     <div class="pt-2 pb-4 px-4 ">
       <div class="flex justify-between">
@@ -13,11 +13,11 @@
       <div class="text-2xl font-baloo font-bold leading-[41px]">NT$ 1600</div>
 
       <div class="space-x-2">
-        <span class="inline-block px-4 py-0.5 bg-gray-200 text-gray-500 text-xs font-medium rounded">
+        <span class="inline-block px-4 py-0.5 bg-gray-200 text-gray-500 text-xs font-medium rounded-sm">
           已被贊助88次
         </span>
 
-        <span class="inline-block px-4 py-0.5 bg-gray-500 text-white text-xs font-medium rounded">
+        <span class="inline-block px-4 py-0.5 bg-gray-500 text-white text-xs font-medium rounded-sm">
           限量<span class="text-yellow">200</span>個
         </span>
       </div>

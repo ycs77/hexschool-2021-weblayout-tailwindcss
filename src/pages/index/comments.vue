@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div class="mb-8 p-4 bg-gray-50 text-sm tracking-[0.7px] border-l-3 border-yellow rounded">
+    <div class="mb-8 p-4 bg-gray-50 text-sm tracking-[0.7px] border-l-3 border-yellow rounded-sm">
       只有本專案的贊助者才可以留言哦，如果有任何專案相關的問題，歡迎<a class="text-red hover:text-light-red" href="#contact" @click.prevent>聯絡提案人</a>！
     </div>
 
     <ul class="space-y-4">
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img01.jpg" alt="廖小杰 的大頭照">
+          <img class="size-12 lg:w-15 lg:h-15 rounded-full" src="@/assets/user_img01.jpg" alt="廖小杰 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               廖小杰
             </div>
-            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-[18px]">
+            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-4.5">
               2020年5月22日 11:32
             </div>
           </div>
@@ -34,12 +34,12 @@
 
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img02.jpg" alt="卡阿伯 的大頭照">
+          <img class="size-12 lg:w-15 lg:h-15 rounded-full" src="@/assets/user_img02.jpg" alt="卡阿伯 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               卡阿伯
             </div>
-            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-[18px]">
+            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-4.5">
               2020年5月22日 11:32
             </div>
           </div>
@@ -52,12 +52,12 @@
 
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img02.jpg" alt="賈師 的大頭照">
+          <img class="size-12 lg:w-15 lg:h-15 rounded-full" src="@/assets/user_img02.jpg" alt="賈師 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               賈師
             </div>
-            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-[18px]">
+            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-4.5">
               2020年5月22日 11:32
             </div>
           </div>
@@ -70,12 +70,12 @@
 
       <li class="p-4 border border-gray-100 rounded-lg">
         <div class="flex items-center">
-          <img class="w-12 h-12 lg:w-[60px] lg:h-[60px] rounded-full" src="@/assets/user_img02.jpg" alt="俊俊 的大頭照">
+          <img class="size-12 lg:w-15 lg:h-15 rounded-full" src="@/assets/user_img02.jpg" alt="俊俊 的大頭照">
           <div class="ml-3.5 lg:ml-4">
             <div class="lg:text-xl font-medium tracking-[1.6px] lg:tracking-[2px]">
               Lucas
             </div>
-            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-[18px]">
+            <div class="lg:mt-1 text-gray-500 text-xs lg:text-sm tracking-[1.71px] leading-4.5">
               2020年5月22日 11:32
             </div>
           </div>

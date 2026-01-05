@@ -8,6 +8,6 @@
   }
 
   button {
-    @apply focus:outline-none;
+    @apply cursor-pointer focus:outline-hidden;
   }
 }

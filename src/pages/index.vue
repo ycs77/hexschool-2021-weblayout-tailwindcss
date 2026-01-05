@@ -28,7 +28,7 @@
       </div>
 
       <div class="hidden lg:block lg:col-span-1">
-        <CrowdfundCardGroup class="sticky top-[108px]" />
+        <CrowdfundCardGroup class="sticky top-27" />
       </div>
     </div>
 

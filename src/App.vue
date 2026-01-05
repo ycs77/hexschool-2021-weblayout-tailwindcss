@@ -11,7 +11,7 @@
           type="button"
           @click="showNav = !showNav"
         >
-          <MdiMenu class="w-8 h-8" />
+          <MdiMenu class="size-8" />
         </button>
       </div>
 
@@ -56,7 +56,7 @@
 
   <RouterView />
 
-  <footer class="bg-gray-800 pt-4 pb-[18px] lg:py-8">
+  <footer class="bg-gray-800 pt-4 pb-4.5 lg:py-8">
     <div class="text-white text-center text-sm lg:text-base tracking-[1.8px] lg:tracking-[2px]">
       Copyright &copy; 拼拼 All rights reserved.
     </div>

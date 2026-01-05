@@ -19,11 +19,11 @@
 
     <div class="mt-4 flex justify-between">
       <div class="space-x-2">
-        <a class="inline-flex justify-center items-center w-[30px] h-[30px] bg-gray-500 text-white rounded-full" href="#fb-link" @click.prevent>
+        <a class="inline-flex justify-center items-center size-7.5 bg-gray-500 text-white rounded-full" href="#fb-link" @click.prevent>
           <FaBrandsFacebookF class="w-auto h-4" />
         </a>
 
-        <a class="inline-flex justify-center items-center w-[30px] h-[30px] bg-gray-500 text-white rounded-full" href="#youtube-link" @click.prevent>
+        <a class="inline-flex justify-center items-center size-7.5 bg-gray-500 text-white rounded-full" href="#youtube-link" @click.prevent>
           <FaBrandsYoutube class="w-auto h-4" />
         </a>
       </div>

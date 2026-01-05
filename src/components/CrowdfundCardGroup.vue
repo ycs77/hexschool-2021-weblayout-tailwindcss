@@ -8,7 +8,7 @@
       </h3>
 
       <ul class="mt-4 space-y-4">
-        <li v-for="i in 3">
+        <li v-for="_ in 3">
           <CrowdfundCard />
         </li>
       </ul>

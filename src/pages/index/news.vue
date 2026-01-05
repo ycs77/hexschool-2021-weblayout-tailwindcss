@@ -6,7 +6,7 @@
         <h4 class="font-bold tracking-[0.7px] lg:tracking-[0.8px]">
           高雄體驗會｜免費參加送帆布袋
         </h4>
-        <div class="text-gray-500 text-sm font-baloo tracking-[0.49px] leading-[24px]">
+        <div class="text-gray-500 text-sm font-baloo tracking-[0.49px] leading-6">
           2021-6-20
         </div>
         <p class="hidden lg:block mt-2 text-sm text-gray-500 tracking-[0.7px]">
@@ -24,7 +24,7 @@
         <h4 class="font-bold tracking-[0.7px] lg:tracking-[0.8px]">
           高雄體驗會｜免費參加送帆布袋
         </h4>
-        <div class="text-gray-500 text-sm font-baloo tracking-[0.49px] leading-[24px]">
+        <div class="text-gray-500 text-sm font-baloo tracking-[0.49px] leading-6">
           2021-6-20
         </div>
         <p class="hidden lg:block mt-2 text-sm text-gray-500 tracking-[0.7px]">
@@ -42,7 +42,7 @@
         <h4 class="font-bold tracking-[0.7px] lg:tracking-[0.8px]">
           高雄體驗會｜免費參加送帆布袋
         </h4>
-        <div class="text-gray-500 text-sm font-baloo tracking-[0.49px] leading-[24px]">
+        <div class="text-gray-500 text-sm font-baloo tracking-[0.49px] leading-6">
           2021-6-20
         </div>
         <p class="hidden lg:block mt-2 text-sm text-gray-500 tracking-[0.7px]">

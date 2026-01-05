@@ -1,10 +1,13 @@
 <template>
   <ul class="space-y-4">
     <Disclosure v-for="faq in faqs" v-slot="{ open }">
-      <li class="border border-gray-100" :class="open ? 'shadow-around rounded' : 'rounded-lg'">
+      <li
+        class="border border-gray-100"
+        :class="open ? 'shadow-around rounded-sm' : 'rounded-lg'"
+      >
         <DisclosureButton class="w-full px-3.5 lg:px-5 py-3 flex justify-between items-center text-left">
           <div class="flex items-center">
-            <div class="inline-flex w-7 h-7 justify-center items-center bg-yellow rounded">
+            <div class="inline-flex size-7 justify-center items-center bg-yellow rounded-sm">
               <span class="text-sm font-baloo font-bold tracking-[0.7px]">
                 {{ faq.id }}
               </span>
@@ -27,7 +30,7 @@
           leave-from-class="scale-100 translate-y-0 opacity-100"
           leave-to-class="scale-95 -translate-y-2 opacity-0"
         >
-          <DisclosurePanel class="p-3.5 lg:p-4 lg:pl-16 lg:text-[14px] text-gray-500 tracking-[0.8px] lg:tracking-[0.7px] leading-[27px] border-t border-gray-100">
+          <DisclosurePanel class="p-3.5 lg:p-4 lg:pl-16 lg:text-[14px] text-gray-500 tracking-[0.8px] lg:tracking-[0.7px] leading-7 border-t border-gray-100">
             {{ faq.content }}
           </DisclosurePanel>
         </transition>
