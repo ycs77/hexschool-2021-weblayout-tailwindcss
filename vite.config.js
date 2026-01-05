@@ -1,4 +1,4 @@
-import path from 'path'
+import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
@@ -9,11 +9,6 @@ import IconsResolver from 'unplugin-icons/resolver'
 
 export default defineConfig({
   base: process.env.BASE_URL || '/',
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
-  },
   plugins: [
     Vue({
       template: {
@@ -27,21 +22,15 @@ export default defineConfig({
     Components({
       resolvers: [
         HeadlessUiResolver(),
-        IconsResolver({
-          prefix: '',
-        }),
+        IconsResolver({ prefix: '' }),
       ],
     }),
     Pages(),
     Icons(),
   ],
-  optimizeDeps: {
-    include: [
-      'vue',
-      'vue-router',
-      'vue-tippy',
-      '@headlessui/vue',
-      '@vueuse/head',
-    ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
   },
 })
